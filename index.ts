@@ -34,7 +34,7 @@ class IndexClass extends DataStructures{
 
        // console.log(myQueue);  // enqueueing
          console.log(myQueue.peek());  // peeking the first element
-         console.log(myQueue.dequeue());// removing the first element
+        //  console.log(myQueue.dequeue());// removing the first element
          // peek after dequeue
          console.log(myQueue.peekLast());
 
