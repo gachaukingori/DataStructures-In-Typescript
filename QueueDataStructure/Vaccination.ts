@@ -1,4 +1,4 @@
-import{Queue} from './Queue';
+import Queue from './Queue';
 class Vaccination {
     private isRegistered : boolean = false;
     private ticketNumber: number = 0;
