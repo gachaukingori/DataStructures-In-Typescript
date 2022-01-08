@@ -1,4 +1,4 @@
-import ADTClass from '../AstractDataStructures'
+import ADTClass from './AstractDataStructures'
 import StackInterface from './StackInterface'
 
 class Stack<T> extends ADTClass<T> implements StackInterface <T>{
