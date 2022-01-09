@@ -8,17 +8,17 @@ class TestSet<T>{
         this.setA = new Set<string>()
         this.setB = new Set<string>()
       this.mySet = new MySet();
-        let fname = "dhemswdjcbesjd";
-        let lname = "shdsdkjwdhlascbs";
+        let consonants = "BCDFGHJKLMNPQRSTVWXYZ";
+        let vowels = "AEIOU";
         /**
          * generate of characters from the strings
          */
-        for(let i = 0; i <fname.length; i++){
-            this.setA.add(fname.charAt(i));
+        for(let i = 0; i <consonants.length; i++){
+            this.setA.add(consonants.charAt(i));
         }
         
-        for(let i = 0; i <lname.length; i++){
-            this.setB.add(lname.charAt(i));
+        for(let i = 0; i <vowels.length; i++){
+            this.setB.add(vowels.charAt(i));
         }
     }
 
@@ -48,8 +48,8 @@ class TestSet<T>{
     }
 }
 let test = new TestSet();
-test.testSetUnion();
-test.testIntersection();
-test.testDifference();
-test.testsymmetricDifference();
+test.testSetUnion(); // prints the 26 alphabets consonants and the vowels
+test.testIntersection(); // prints an empty set.  there are no common elements in the vowel and consonants
+test.testDifference(); // A-B prints the consonants while B - A Prints only the vowels
+test.testsymmetricDifference(); // prints the alphabet set. all elements are uncommon in both sets 
 

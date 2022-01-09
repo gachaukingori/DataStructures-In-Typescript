@@ -1,3 +1,4 @@
+import e from 'express';
 import SetInterface from './SetInterface'
 class MySet<T> implements SetInterface<T>{
     private setA: Set<T>;
@@ -40,6 +41,11 @@ class MySet<T> implements SetInterface<T>{
                
                 tempSet.add(value)
                
+            }
+        })
+        setB.forEach((element)=>{
+            if(setA.has(element)){
+                tempSet.add(element)
             }
         })
         return tempSet;
