@@ -1,2 +1,2 @@
-#Data Structures In Implementation in Typescript
+#Data Structures Implementation in Typescript
 
