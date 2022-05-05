@@ -5,7 +5,5 @@ interface StackInterface <T> {
      push:(item :T)=>void
      clear:()=>void;
      
-
-
 }
 export default StackInterface;

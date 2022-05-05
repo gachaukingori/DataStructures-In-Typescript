@@ -1,12 +1,7 @@
 class DataStructures{
         private sentence1:string = "";
         private sentence2: string = "";
-    // constructor(x :string ,y:string){
-    //     this.sentence1 = x;
-    //     this.sentence2 = y;
-
-    // }
-     
+    
 
     // Implementation of multiple  constructors 
     constructor(... args:any[]){

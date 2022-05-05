@@ -1,5 +1,5 @@
 import {DataStructures}   from "./DataStructures";
-import {Queue}   from "./Queue";
+import Queue   from "./Queue";
 import {Vaccination} from "./Vaccination";
 
 class IndexClass extends DataStructures{
@@ -12,16 +12,12 @@ class IndexClass extends DataStructures{
         
         let dataStructures = new DataStructures("This is a boy", "This  a girl");
         let mySet = dataStructures.testSets();
-        // for(let i = 0; i<mySet.size; i++){
-        //     console.log(mySet);
-        // }
+        
         mySet.forEach((values:string)=>{
             console.log(values);
 
         });
-        //  for(let values of mySet){
-        //      console.log(values);
-        //  }
+        
 
         return mySet;
     }

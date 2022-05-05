@@ -1,4 +1,4 @@
-import e from 'express';
+
 import SetInterface from './SetInterface'
 class MySet<T> implements SetInterface<T>{
     private setA: Set<T>;
