@@ -1,4 +1,5 @@
 **THIS IS A LEARNING PROJECT**
+
 **This project aims at -**
  1.improving my DSA skills and typescript skills.
  2.helping other developers who are looking to learn about Data structures and algorithms
