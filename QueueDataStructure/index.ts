@@ -1,5 +1,5 @@
 import {DataStructures}   from "./DataStructures";
-import {Queue}   from "./Queue";
+import Queue   from "./Queue";
 import {Vaccination} from "./Vaccination";
 
 class IndexClass extends DataStructures{

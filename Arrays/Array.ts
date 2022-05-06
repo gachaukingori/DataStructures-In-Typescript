@@ -9,38 +9,86 @@ class MyArray<T> implements ArrayInterface<T>{
 
     }
 
+        
+
+    /**
+     * 
+     * @param array a generic Array 
+     * @returns a reversed generic array with the last item as the first item ....
+     */
         public reverseArray(array:T[]){
-            let tempArray :T[] = new Array(array.length);
-            let j = array.length;
-            for( let i=0; i<array.length; i++){
-                j--
-                tempArray[j] = array[i];
+            if(array.length == 0){
+                throw new Error("Array cannot be empty");
+
+            }
+            let tempArray :T[] = new Array(array.length); // create a new array of the same size as your array eg size 5 has index 0 -4
+            let j = array.length; // get the length of the array j = 5
+            for( let i=0; i<array.length; i++){ // loop through original array when i =0;
+                j-- // decrement j after every loop because arrays are zero index, you need to  decrease before setting  j is 4 
+                tempArray[j] = array[i]; // set the element of index j to the value of index i; set index 4 to be value of index 0
 
             }
             return tempArray;
         }
+
+        /**
+         * 
+         * @param array  an array of numbers 
+         * @returns  the maximum number in the array
+         */
         public getMaximum(array:number[]){
-            let currentMax = array[0];
-            for(let i = 1; i<array.length; i++){
-                if(array[i]>currentMax){
-                    currentMax = array[i];
-                }
+            if(array.length == 0){
+                throw new Error("Array cannot be empty");
+            }else if(array.length == 1){
+                return array[0]; // if there is only one element then this is the maximu element
+            }
+            let currentMax = array[0]; // take the  first element as the maximum 
+            for(let i = 1; i<array.length; i++){ // take the next element (index 1) for comparison  
+                if(array[i]>currentMax){ // if the element at index 1 is greater than the first element (index 0)
+                    currentMax = array[i]; // the element at index 1 becomes the maximum element
+                } // if there are still elements left in the array increment the move to the next index ( i = 2) with your current maximu value
             }
 
             return currentMax;
         }
+
+        /**
+         * 
+         * @param array an array of numbers
+         * @returns the minimum number in the array
+         */
         public getMinimum(array:number[]){
-            let currentMin = array[0];
-            for(let i = 0; i<array.length; i++){
-                if(array[i]<currentMin){
-                    currentMin = array[i];
+            if(array.length == 0){
+                throw new Error("Array cannot be empty");
+
+            }else if(array.length == 1){
+                return array[0]; // if there is only one element then this is the minimum element
+            }
+            let currentMin = array[0]; // take the first element as the minimum element
+
+            for(let i = 1; i<array.length; i++){ // take the next element of the other elements for comparison
+                if(array[i]<currentMin){ // if the elemnt is smaller than the first element, 
+
+                    currentMin = array[i]; // the element becomes the new minimum
                 }
+                // start the loop with the new current minimu and move to the next index 
             }
 
             return currentMin;
         }
 
+        /**
+         * 
+         * @param array unsorted array
+         * @returns an array sorted in ascending order
+         */
+
+
         public selectionSort(array:T[]){
+            if(array.length == 0){
+                throw new Error("Array cannot be empty");
+
+            }
             for(let i = 0; i<array.length; i++){
                 // array example [5,2,4]
 
@@ -73,6 +121,12 @@ class MyArray<T> implements ArrayInterface<T>{
             return array;
         }
 
+
+        /**
+         * 
+         * @param array an unsorted array to be sorted
+         * @returns a sorted array
+         */
         public insertionSort(array:T[]){
 
             return array;

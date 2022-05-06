@@ -2,7 +2,7 @@ import {MyArray} from "./Array";
 
 
 let array = new MyArray();
-let names = ["Gachau", "Victor", "Kingori"];
+let names = ["X", "b", "C", "A","x","U", "B"];
 let reversedArray = array.reverseArray(names);
 console.log(reversedArray)
 
@@ -15,7 +15,7 @@ console.log(maxAge)
 let minAge = array.getMinimum(age);
 console.log(minAge)
 
-let selectionSorted = array.selectionSort(age)
+let selectionSorted = array.selectionSort(names)
 console.log(selectionSorted)
 
 
