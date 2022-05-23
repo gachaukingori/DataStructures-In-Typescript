@@ -136,7 +136,7 @@ class MyArray<T> implements ArrayInterface<T>{
         /**
          * Trying to use reverse array to determine if a string is a palindrome
          * @param palindrome 
-         * @returns 
+         * @returns true if the string is a palindrome
          */
         public  palindromeProblemReverse(palindrome:string):boolean {
             let strArray = Array.from(palindrome)
@@ -166,6 +166,13 @@ class MyArray<T> implements ArrayInterface<T>{
             
             
         }
+
+        /**
+         * 
+         * @param palindrome string to be determined if its a palindrome
+         * 
+         * @returns true us the string is palindrome false if it is not
+         */
 
         public palindromeProblemDivideAndConquer(palindrome:string){
             
