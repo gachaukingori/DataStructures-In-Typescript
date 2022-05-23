@@ -132,6 +132,78 @@ class MyArray<T> implements ArrayInterface<T>{
             return array;
         }
 
+
+        /**
+         * Trying to use reverse array to determine if a string is a palindrome
+         * @param palindrome 
+         * @returns 
+         */
+        public  palindromeProblemReverse(palindrome:string):boolean {
+            let strArray = Array.from(palindrome)
+            let  length = strArray.length
+
+            let tempArray = new Array(length);
+            
+
+            for(let i = 0; i < tempArray.length; i++){
+                length--
+                tempArray[i] = strArray[length]
+                
+            }
+            console.log(strArray)
+            console.log(tempArray)
+
+
+
+            if(strArray.toString() === tempArray.toString()){
+                console.log(palindrome + " is a palindrome")
+                return true
+            }else{
+                console.log(palindrome + " is not a palindrome")
+                return false;
+            }       
+
+            
+            
+        }
+
+        public palindromeProblemDivideAndConquer(palindrome:string){
+            
+            let strArray = Array.from(palindrome)
+            let  length = strArray.length
+            let  firstArray = new Array();
+            let  secondArray = new Array()
+            if(length%2 == 0){
+                let mid = length/2;
+
+                 firstArray = strArray.slice(0,mid);
+                 secondArray = strArray.slice(mid, length); 
+    
+            }else{
+                length --;
+               let mid = length/2;
+
+                firstArray = strArray.slice(0,mid);
+                secondArray = strArray.slice(mid+1,strArray.length ); 
+
+               console.log(firstArray)
+               console.log(secondArray)
+            }
+
+
+            if(firstArray.toString() === this.reverseArray(secondArray).toString()){
+                console.log(palindrome + " is a palindrome")
+                return true
+            }else{
+                console.log(palindrome + " is not a palindrome")
+                return false;
+            }      
+           
+
+
+
+        }
+
 }
 
 

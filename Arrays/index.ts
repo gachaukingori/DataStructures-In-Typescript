@@ -18,4 +18,9 @@ console.log(minAge)
 let selectionSorted = array.selectionSort(names)
 console.log(selectionSorted)
 
+array.palindromeProblemReverse("saippuakivikauppias");
+
+array.palindromeProblemDivideAndConquer("saippuakivikauppias")
+
+
 
