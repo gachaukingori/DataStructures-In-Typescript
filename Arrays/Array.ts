@@ -106,7 +106,7 @@ class MyArray<T> implements ArrayInterface<T>{
                     
                     
                 }
-                if(currentIndex !=i){ // swapping the minimum to if it was changed in line 52 ie. after 5 taking the place of value 2 we need 2 to take the position of element 5
+                if(currentIndex !=i){ // swapping the minimum to if it was changed  ie. after 5 taking the place of value 2 we need 2 to take the position of element 5
                     array[currentIndex] = array[i]; // since j (1) is the current index now, we take the value of index 1 (2) and assign it to index i=0 (5)
 
                     array[i] = currentMin; // the 2 now becomes the value of element at index 0; 
