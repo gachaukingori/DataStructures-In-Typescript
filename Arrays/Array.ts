@@ -129,6 +129,22 @@ class MyArray<T> implements ArrayInterface<T>{
          */
         public insertionSort(array:T[]){
 
+            // array example of 7, 3,1,2
+            
+
+            for(let i = 0; i<array.length; i++){
+                let currentMinimum = array[i]; // when i = 0, 7 is the minimum, 1 =1 currentMin = 3, when i = 2 currentMin = 1, i = 3 currentMin  (array[3]) =2
+                let k = i-1; // k = -1, skip the while loop, k =0 now, k = 1 (2-1), i=3 k =2 
+                while (k>=0 && array[k]>currentMinimum){// i =1 the value at index 0 which is 7 is greater than 3, i =2 k =1 and  7 > 1, k >= 0 true and array[2] which is 7 is greater than 2 , i =3 and k = 1 arra[k] is 3 and current Minimum = 2 we get inside the loop, 
+                  array[k+1] = array[k] //  we set the value at index k+1 (index 1)   to 7, set the value of index k+1 (index 2) = to value of k (index 1) index[2] = 7, when k is 2 make the value of array[k+1] = to be 7 7 is the value of index 3 array is 1,3,2,7, when i=3 and  k =1 , set the value of index k+1 to be the value of k that is index 2 (3) value becomes the value of index 3
+                    k-- // decrease the value of k // k is now less than 0,  k = 0 during the second loop 3 currently the value of index 0 and its greater than 1, so 3 becomes the value of index 1 and 1 becomes the value of index 0 k-- becomes -1 exit the loop with k as -1 and currentMinimum = 1 which is array[i], decrease  k to 1, decrease k to 0. value of index 0 is 1 and is less than 2 so no need to loop
+                }
+             array[k+1] = currentMinimum // set the value at index (k+1) == 1 to be the current minimum, k is -1 so k+1 = i , exited the while loop when k was 0 so k+1 = 1 the value on index 1 is 2, 
+             //7 remains to be the current minimum(i=0), 3 becomes the current minimum(i=1),
+             // increase i by 1 to 1
+                
+            }
+
             return array;
         }
 
