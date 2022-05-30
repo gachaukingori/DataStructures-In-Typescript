@@ -10,9 +10,9 @@ let reversedArray = array.reverseArray(names);
 console.log( "\n array after reversal \n \t" +reversedArray)
 
 
-let age = [43,64,38,84,27,29];
+let age = [43,64,38,84,27,29,42];
 
-console.log("\n Example of an unsorted array \n " +age )
+
 console.log("\n we will use this to determine the following \n 1. Maximum value \n 2. Minimum value \n  " +
 "3. Sort the array using \n  \t Insertion sort \n \t Selection sort" )
 
@@ -33,13 +33,18 @@ let minAge = array.getMinimum(age);
 
 // array.palindromeProblemDivideAndConquer("saippuakivikauppias")
 
-let arrayObject = {
-    "Maximum value" : maxAge,
-    "Minimum Value" : minAge,
-    "insertion sort " : array.insertionSort(age),
-    "Selection sort " : array.selectionSort(age),
+// let arrayObject = {
+//     "Maximum value" : maxAge,
+//     "Minimum Value" : minAge,
+//     "insertion sort " : array.insertionSort(age),
+//     "Selection sort " : array.selectionSort(age),
 
-    }
+//     }
 
-    console.log(arrayObject)
+//     console.log(arrayObject)
+
+console.log("\n Example of an unsorted array \n " +age )
+console.log(array.mergeSort(age));
+
+
 

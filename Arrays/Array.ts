@@ -16,7 +16,7 @@ class MyArray<T> implements ArrayInterface<T>{
      * @param array a generic Array 
      * @returns a reversed generic array with the last item as the first item ....
      */
-        public reverseArray(array:T[]){
+        public reverseArray(array:T[]):T[]{
             if(array.length == 0){
                 throw new Error("Array cannot be empty");
 
@@ -36,7 +36,7 @@ class MyArray<T> implements ArrayInterface<T>{
          * @param array  an array of numbers 
          * @returns  the maximum number in the array
          */
-        public getMaximum(array:number[]){
+        public getMaximum(array:number[]):number{
             if(array.length == 0){
                 throw new Error("Array cannot be empty");
             }else if(array.length == 1){
@@ -57,7 +57,7 @@ class MyArray<T> implements ArrayInterface<T>{
          * @param array an array of numbers
          * @returns the minimum number in the array
          */
-        public getMinimum(array:number[]){
+        public getMinimum(array:number[]):number{
             if(array.length == 0){
                 throw new Error("Array cannot be empty");
 
@@ -84,7 +84,7 @@ class MyArray<T> implements ArrayInterface<T>{
          */
 
 
-        public selectionSort(array:T[]){
+        public selectionSort(array:T[]):T[]{
             if(array.length == 0){
                 throw new Error("Array cannot be empty");
 
@@ -127,7 +127,7 @@ class MyArray<T> implements ArrayInterface<T>{
          * @param array an unsorted array to be sorted
          * @returns a sorted array
          */
-        public insertionSort(array:T[]){
+        public insertionSort(array:T[]) :T[]{
 
             // array example of 7, 3,1,2
             
@@ -148,6 +148,55 @@ class MyArray<T> implements ArrayInterface<T>{
             return array;
         }
 
+
+        public mergeSort(array:T[]):T[]{
+            if(array.length>1){
+                let firstHalf :T[]
+                let secondHalf :T[]
+
+                let firstHalfLength = Math.floor(array.length/2)
+                let secondHalfLength = array.length - firstHalfLength
+                firstHalf = array.slice(0, firstHalfLength);
+                secondHalf = array.slice(firstHalfLength, array.length);
+
+                // console.log(firstHalf +" Second half " +secondHalf )
+
+                this.mergeSort(firstHalf)
+                this.mergeSort(secondHalf)
+                this.merge(firstHalf, secondHalf, array);
+
+
+
+            }
+
+
+
+            return array;
+        }
+
+
+        public merge(array1: T[], array2:T[], temp:T[] ){
+            let current1 = 0
+            let current2 = 0
+            let currentTemp = 0
+
+            while(current1<array1.length && current2<array2.length){
+                if(array1[current1]<array2[current2]){
+                    temp[currentTemp++] = array1[current1++];
+                }else{
+                    temp[currentTemp++] = array2[current2++];
+                }
+            }
+            while(current1<array1.length){
+                temp[currentTemp++] = array1[current1++];
+            }
+            while(current2<array2.length){
+                temp[currentTemp++] = array2[current2++];
+            }
+            
+    
+        }
+        
 
         /**
          * Trying to use reverse array to determine if a string is a palindrome
